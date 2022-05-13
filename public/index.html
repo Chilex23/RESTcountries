@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>CountryPedia</title>
+<script defer src="js/bundle.js"></script></head>
+<body>
+    <div class="container">
+        <nav class="logo">
+            <h4 class="heading-4 bold text-light">
+                CountryPedia
+            </h4>
+            <figure class="logo__container">
+                <img src="img/logo.jpg" alt="Logo" class="logo__container-img">
+            </figure>
+        </nav>
+        <header class="header">
+            <form class="header__form">
+                <input type="text" name="search" placeholder="Search for over 200 Countries..." class="header__search">
+                <button class="btn header__search-btn">
+                    <svg class="search__icon">
+                        <use href="img/icons.svg#icon-search"></use>
+                    </svg>
+                    <span>Search</span>
+                </button>
+            </form>
+            <button class="all btn--inline">Show all Countries</button>
+            <div class="header__region">
+                <label for="region" class="header__region-label">Filter By Region.</label>
+                <select name="region" id="region" class="header__region-dropdwn">
+                    <option value="" selected>Select a region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="results" id="bd">
+            <div class="results__list"></div>
+            <!-- <div class="results__card">
+                <figure class="results__card-img">
+                    <img src="img/logo.jpg" alt="Flag">
+                </figure>
+                <div class="results__card-deets">
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Name: Nigeria
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Currency: Naira
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="src/img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Region: Africa
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Population: 2222222
+                    </span>
+                </div>
+            </div>
+
+            <div class="results__card">
+                <figure class="results__card-img">
+                    <img src="img/logo.jpg" alt="Flag">
+                </figure>
+                <div class="results__card-deets">
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Name: Nigeria
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Currency: Naira
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Region: Africa
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Population: 2222222
+                    </span>
+                </div>
+            </div>
+
+            <div class="results__card">
+                <figure class="results__card-img">
+                    <img src="img/logo.jpg" alt="Flag">
+                </figure>
+                <div class="results__card-deets">
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Name: Nigeria
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Currency: Naira
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Region: Africa
+                    </span>
+                    <span>
+                        <svg class="results__icon">
+                            <use href="img/icons.svg#icon-arrow-right2"></use>
+                        </svg>
+                        Population: 1,000,000,000
+                    </span>
+                </div>
+            </div> -->
+
+            <div class="pagination">
+                <!-- <button class="btn--inline">
+                    <span>Page 1</span>
+                </button>
+                <button class="btn--inline">
+                    <span>Page 2</span>
+                </button>
+                <button class="btn--inline">
+                    <span>Page 3</span>
+                </button>
+                <button class="btn--inline">
+                    <span>Page 4</span>
+                </button> -->
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Developed By Onumaegbu Chima &copy; 2022</p>
+        </footer>
+    </div>
+</body>
+</html>

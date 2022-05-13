@@ -1,0 +1,27 @@
+.logo {
+    background-image: linear-gradient(to right bottom, $color-secondary, $color-secondary-dark);
+    grid-column: full-start / full-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h4 {
+        position: absolute;
+        left: 1rem;
+    }
+
+    &__container {
+        height: 7rem;
+        width: 7rem;
+        display: flex;
+        align-items: center;
+        
+        &-img {
+            object-fit: cover;
+            border-radius: 50%;
+            max-width: 100%;
+        }
+    }
+
+}

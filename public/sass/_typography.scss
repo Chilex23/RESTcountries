@@ -1,0 +1,44 @@
+@mixin bold {
+    font-weight: 700;
+}
+
+@mixin btn {
+    border: none;
+    cursor: pointer;
+}
+
+.heading-1 {
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.heading-2 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.heading-3 {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.heading-4 {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.btn {
+   @include btn;
+}
+
+.btn--inline {
+    @include btn;
+    background-color: whitesmoke;
+    font-weight: 700;
+    height: 3rem;
+    width: 5rem;
+    border-radius: 10px;
+}
+
+.text-light { color: #fff;}
+.bold { @include bold }
