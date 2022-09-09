@@ -2,13 +2,12 @@
     background-color: black;
     grid-column: full-start / full-end;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     position: relative;
 
     h4 {
-        position: absolute;
-        left: 1rem;
+        margin-left: 1rem;
     }
 
     &__container {
