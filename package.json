@@ -7,7 +7,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
-    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "watch:sass": "node-sass src/sass/main.scss public/css/style.css -w",
     "devserver": "live-server",
     "sass:start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",

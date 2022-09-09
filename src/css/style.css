@@ -78,7 +78,7 @@ body {
       text-align: center; }
 
 .logo {
-  background-image: linear-gradient(to right bottom, #5a476b, #20112e);
+  background-color: black;
   grid-column: full-start / full-end;
   display: flex;
   justify-content: center;

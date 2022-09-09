@@ -1,7 +1,7 @@
 .results {
     grid-column: center-start / center-end;
     padding: 2rem;
-
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(3, minmax(20rem, 1fr));
     justify-content: center;
@@ -10,6 +10,7 @@
     &__card {
         background-color: whitesmoke;
         border-radius: 10px;
+        border: 2px solid black;
         box-shadow: 0 2rem 6rem 0.5rem rgba(97, 85, 81, 0.2);
 
         &-img  img{

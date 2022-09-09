@@ -1,5 +1,5 @@
 .logo {
-    background-image: linear-gradient(to right bottom, $color-secondary, $color-secondary-dark);
+    background-color: linear-gradient(to right bottom, $color-secondary, $color-secondary-dark);
     grid-column: full-start / full-end;
     display: flex;
     justify-content: center;
