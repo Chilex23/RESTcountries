@@ -70,7 +70,6 @@ export const countryDetails = (country) => {
                     </div>
                 </div>
             </div>
-            <button class="back btn--inline">Go back</button>
         </div>
     `;
   elements.resultsList.insertAdjacentHTML("beforeend", markup);

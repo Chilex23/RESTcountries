@@ -158,11 +158,11 @@ window.addEventListener("hashchange", (e) => {
 // Event Listener for getting Country Details
 elements.resultsList.addEventListener("click", loadCountry);
 
-// Event Listener to go back to home page.
-elements.resultsList.addEventListener("click", (e) => {
-  const btn = e.target.closest(".back");
-  if (btn) window.location.href = "/";
-});
+// // Event Listener to go back to home page.
+// elements.resultsList.addEventListener("click", (e) => {
+//   const btn = e.target.closest(".back");
+//   if (btn) window.location.href = "/";
+// });
 
 // Event listener for the pagination buttons
 elements.pagination.addEventListener("click", (e) => {

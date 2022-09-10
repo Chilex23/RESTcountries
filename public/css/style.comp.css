@@ -199,8 +199,13 @@ a:visited {
       justify-items: start;
       align-items: center; }
   .results__icon {
-    height: 1rem;
-    width: 1rem; }
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1rem; }
+    @media only screen and (max-width: 40.625em) {
+      .results__icon {
+        height: 2rem;
+        width: 2rem; } }
   .results__list {
     grid-column: 1 / -1;
     display: grid;
