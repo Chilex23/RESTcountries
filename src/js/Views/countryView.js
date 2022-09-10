@@ -1,17 +1,21 @@
-import { elements } from "./base"
+import { elements } from "./base";
 import { formatPopulation } from "./allCountriesView";
 
-export const countryDetails = country => {
-    const markup = `
+export const countryDetails = (country) => {
+  const markup = `
         <div class="country">
             <h1 class="country__header heading-1">${country.name.common}</h1>
             <div class="country__body">
                 <div class="country__img-container">
                     <figure class="country__img country__img-1">
-                        <img src="${country.flags.svg}" alt="${country.name.common} Flag">
+                        <img src="${country.flags.svg}" alt="${
+    country.name.common
+  } Flag">
                     </figure>
                     <figure class="country__img">
-                        <img src="${country.coatOfArms.svg}" alt="${country.name.common} coat of arms">
+                        <img src="${country.coatOfArms.svg}" alt="${
+    country.name.common
+  } coat of arms">
                     </figure>
                 </div>
                 <div class="country__details">
@@ -21,7 +25,11 @@ export const countryDetails = country => {
                     </div>
                     <div class="country__details-item">
                         <span>Capital:</span>
-                        <span>${country.capital !== undefined ? country.capital[0] : 'No Capital'}</span>
+                        <span>${
+                          country.capital !== undefined
+                            ? country.capital[0]
+                            : "No Capital"
+                        }</span>
                     </div>
                     <div class="country__details-item">
                         <span>Drive Side:</span>
@@ -41,7 +49,11 @@ export const countryDetails = country => {
                     </div>
                     <div class="country__details-item">
                         <span>Sub-Region:</span>
-                        <span>${country.subregion !== undefined ? country.subregion : 'No Subregion'}</span>
+                        <span>${
+                          country.subregion !== undefined
+                            ? country.subregion
+                            : "No Subregion"
+                        }</span>
                     </div>
                     <div class="country__details-item">
                         <span>Top-Level Domain:</span>
@@ -50,7 +62,9 @@ export const countryDetails = country => {
                     <div class="country__details-item">
                         <span>TimeZones:</span>
                         <div style="display: flex; flex-wrap: wrap; gap: .4rem;">
-                            ${country.timezones.map((el) => `<span>${el}</span>`)}
+                            ${country.timezones.map(
+                              (el) => `<span>${el}</span>`
+                            )}
                         </div>
                         
                     </div>
@@ -59,5 +73,5 @@ export const countryDetails = country => {
             <button class="back btn--inline">Go back</button>
         </div>
     `;
-    elements.resultsList.insertAdjacentHTML('beforeend', markup);
-}
+  elements.resultsList.insertAdjacentHTML("beforeend", markup);
+};
