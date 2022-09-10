@@ -7,6 +7,11 @@
     justify-content: center;
     gap: 1rem;
 
+    @media only screen and (max-width: $bp-small) {
+        grid-column: full-start / full-end ;
+        grid-template-columns: 1fr;
+    }
+
     &__card {
         background-color: whitesmoke;
         border-radius: 10px;
@@ -20,9 +25,9 @@
             height: 15rem;
             object-fit: cover;
         }
-
+        
         &-deets {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             padding: 1rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -43,5 +48,13 @@
         grid-template-columns: repeat(3, minmax(20rem, 1fr));
         justify-content: center;
         gap: 1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(2, minmax(20rem, 1fr));
+        }
+
+        @media only screen and (max-width: 400px) {
+            grid-template-columns: 1fr;
+        }
     }
 }

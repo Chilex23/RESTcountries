@@ -148,6 +148,14 @@ const controlRegion = async () => {
 window.addEventListener('load', loadAll);
 elements.allCountries.addEventListener('click', loadAll);
 
+// Load of all countries if the hash is empty as in the homepage
+window.addEventListener('hashchange', e => {
+    if (!window.location.hash) {
+        state.pageNo = "1";
+        loadAll();
+    }
+})
+
 // Event Listener for getting Country Details
 elements.resultsList.addEventListener('click', loadCountry);
 

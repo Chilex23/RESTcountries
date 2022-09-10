@@ -10,18 +10,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        width: 60%;
         margin: 2rem 0;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 90%;
+        }
     }
    
     &__search {
+        font-family: $font-primary;
         width: 100%;
         min-height: 3rem;
         display: inline-block;
         padding: 1rem;
         border: 1px solid black;
         border-radius: 5rem;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         background-color: rgb(231, 229, 229);
     }
 
@@ -31,7 +36,8 @@
     }
 
     &__search-btn {
-        font-size: 1.2rem;
+        font-family: $font-primary;
+        font-size: 1.6rem;
         color: #fff;
         text-transform: uppercase;
         background-color: black;
@@ -65,11 +71,12 @@
         font-size: 1.6rem;
 
         &-dropdwn {
-            height: 2rem;
+            font-family: $font-primary;
+            height: 3rem;
             border-radius: 10px;
-            width: 10rem;
+            width: 15rem;
             border: 1px solid $color-secondary;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             text-align: center;
         }
     }

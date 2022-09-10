@@ -2,6 +2,9 @@
     margin: 5rem auto;
     grid-column: 2 / 3;
     text-align: center; 
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+   }
 }
 .spinner svg {
       height: 6rem;

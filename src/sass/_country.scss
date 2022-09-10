@@ -17,16 +17,24 @@
         height: 15rem;
     }
 
+    &__img-1  img{
+        border: 1px solid black;
+    }
+
     &__img-container {
         display: flex;
         justify-content: space-between;
+
+        @media only screen and (max-width: $bp-small) {
+           flex-direction: column;
+        }
     }
 
     &__details {
         width: fit-content;
         margin: 2rem 0;
         border-radius: 8px;
-        border: 2px solid black;
+        border: 1px solid black;
     }
 
     &__details-item {
@@ -34,16 +42,16 @@
         justify-content: space-between;
         align-items: center;
         gap: 4rem;
-        border-top: 2px solid black;
+        border-top: 1px solid black;
         padding: .6rem;
 
         & span:first-child {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 600;
         }
 
         & span {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
         }
     }
 }

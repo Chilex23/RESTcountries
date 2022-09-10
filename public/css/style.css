@@ -6,13 +6,18 @@
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
-  font-family: "Old Standard TT", serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background: white; }
+  background: white;
+  font-size: 1.6rem; }
 
 .container {
   display: grid;
@@ -37,26 +42,31 @@ a:visited {
   .country__img img {
     width: 18rem;
     height: 15rem; }
+  .country__img-1 img {
+    border: 1px solid black; }
   .country__img-container {
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 40.625em) {
+      .country__img-container {
+        flex-direction: column; } }
   .country__details {
     width: fit-content;
     margin: 2rem 0;
     border-radius: 8px;
-    border: 2px solid black; }
+    border: 1px solid black; }
   .country__details-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     padding: .6rem; }
     .country__details-item span:first-child {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: 600; }
     .country__details-item span {
-      font-size: 1.2rem; }
+      font-size: 1.6rem; }
 
 .footer {
   grid-column: full-start / full-end;
@@ -76,22 +86,27 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 60%;
     margin: 2rem 0; }
+    @media only screen and (max-width: 40.625em) {
+      .header__form {
+        width: 90%; } }
   .header__search {
+    font-family: "Rubik", sans-serif;
     width: 100%;
     min-height: 3rem;
     display: inline-block;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 5rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     background-color: #e7e5e5; }
   .header__search:focus {
     background-color: #fff;
     outline: 1px solid orange; }
   .header__search-btn {
-    font-size: 1.2rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6rem;
     color: #fff;
     text-transform: uppercase;
     background-color: black;
@@ -118,11 +133,12 @@ a:visited {
     margin-top: 1rem;
     font-size: 1.6rem; }
     .header__region-dropdwn {
-      height: 2rem;
+      font-family: "Rubik", sans-serif;
+      height: 3rem;
       border-radius: 10px;
-      width: 10rem;
+      width: 15rem;
       border: 1px solid #5a476b;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       text-align: center; }
 
 .logo {
@@ -130,7 +146,8 @@ a:visited {
   grid-column: full-start / full-end;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  padding: 1.4rem 0; }
   .logo h4 {
     margin-left: 1rem; }
   .logo__container {
@@ -159,6 +176,10 @@ a:visited {
   grid-template-columns: repeat(3, minmax(20rem, 1fr));
   justify-content: center;
   gap: 1rem; }
+  @media only screen and (max-width: 40.625em) {
+    .results {
+      grid-column: full-start / full-end;
+      grid-template-columns: 1fr; } }
   .results__card {
     background-color: whitesmoke;
     border-radius: 10px;
@@ -171,7 +192,7 @@ a:visited {
       height: 15rem;
       object-fit: cover; }
     .results__card-deets {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       padding: 1rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -186,11 +207,20 @@ a:visited {
     grid-template-columns: repeat(3, minmax(20rem, 1fr));
     justify-content: center;
     gap: 1rem; }
+    @media only screen and (max-width: 40.625em) {
+      .results__list {
+        grid-template-columns: repeat(2, minmax(20rem, 1fr)); } }
+    @media only screen and (max-width: 400px) {
+      .results__list {
+        grid-template-columns: 1fr; } }
 
 .spinner {
   margin: 5rem auto;
   grid-column: 2 / 3;
   text-align: center; }
+  @media only screen and (max-width: 40.625em) {
+    .spinner {
+      grid-column: 1 / -1; } }
 
 .spinner svg {
   height: 6rem;
@@ -207,6 +237,9 @@ a:visited {
 .heading-1 {
   font-size: 4.5rem;
   line-height: 1; }
+  @media only screen and (max-width: 40.625em) {
+    .heading-1 {
+      font-size: 4rem; } }
 
 .heading-2 {
   font-size: 4rem;
@@ -221,15 +254,17 @@ a:visited {
   line-height: 1; }
 
 .btn {
+  font-family: "Rubik", sans-serif;
   border: none;
   cursor: pointer; }
 
 .btn--inline {
+  font-family: "Rubik", sans-serif;
   border: none;
   cursor: pointer;
   background-color: black;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   width: fit-content;
   padding: 1rem 2rem;
   border-radius: 5rem;
