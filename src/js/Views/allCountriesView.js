@@ -1,4 +1,5 @@
 import { elements } from "./base";
+import { state } from "..";
 
 export const clearResults = () => {
     elements.resultsList.innerHTML = '';
@@ -65,9 +66,7 @@ export const renderCountry = country => {
 
 const createButtons = pageNo => `
     <button class="btn--inline" data-page="${pageNo}">
-        <a href="#bd">
-            <span>Page ${pageNo}</span>
-        </a> 
+        <span>Page ${pageNo}</span>
     </button>
 `;
 
@@ -91,4 +90,15 @@ export const renderResults = (countries,  page = 1, resPerPage = 12) => {
 
     // Render the pagination buttons
     renderButtons(countries.length, resPerPage);
+    console.log(state);
+
+    // Add a color to indicate current selected page
+    const nodes = Array.from(elements.pagination.children);
+    for (let node of nodes) {
+        if (node.dataset.page === state.pageNo) {
+            console.log(node);
+            node.style.backgroundColor = "red";
+            break;
+        }
+    }
 }

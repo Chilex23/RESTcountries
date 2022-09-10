@@ -13,7 +13,9 @@ import * as countryView from "./Views/countryView";
 /*
 GLOBAL STATE
 */
-const state = {}
+export const state = {
+    pageNo: "1"
+}
 
 //CONTROLLER TO LOAD ALL COUNTRIES ON LOAD OF THE PAGE
 const controlAll = async () => {
@@ -40,7 +42,7 @@ const loadAll = async () => {
     try {
         //Recieve the countries data
         const data = await controlAll();
-        console.log(data);
+        // console.log(data);
         
         // Clear the loader
         clearLoader();
@@ -108,16 +110,12 @@ const controlRegion = async () => {
         }
     }
 }
-console.log(state);
+
 /**
- * EVENT LISTENERS
+ * CONTROLLER FOR THE COUNTRY DETAIL
  */
 
-// Event listeners to load all the countries
-window.addEventListener('load', loadAll);
-elements.allCountries.addEventListener('click', loadAll);
-
-const loadCountry = async (e) => {
+ const loadCountry = async (e) => {
     const card = e.target.closest('.results__card');
     let country = card.dataset.name;
     if (country) {
@@ -139,6 +137,17 @@ const loadCountry = async (e) => {
     }
 }
 
+// console.log(state);
+
+
+/**
+ * EVENT LISTENERS
+ */
+
+// Event listeners to load all the countries
+window.addEventListener('load', loadAll);
+elements.allCountries.addEventListener('click', loadAll);
+
 // Event Listener for getting Country Details
 elements.resultsList.addEventListener('click', loadCountry);
 
@@ -153,10 +162,8 @@ elements.pagination.addEventListener('click', e => {
     const btn = e.target.closest('.btn--inline');
     if (btn) {
         const goToPage = parseInt(btn.dataset.page);
-        const selectedBtn = document.querySelector(`[data-page='${goToPage}']`);
-        scrollTo(0, 100);
-        selectedBtn.classList.add('purple');
-        console.log(selectedBtn);
+        state.pageNo = btn.dataset.page;
+        window.scrollTo(0, 200)
         allCountriesView.clearResults();
         allCountriesView.renderResults(state.countries.result, goToPage);
     }
