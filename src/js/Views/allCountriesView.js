@@ -5,7 +5,7 @@ export const clearResults = () => {
     elements.pagination.innerHTML = '';
 }
 
-const formatPopulation = num => {
+export const formatPopulation = num => {
     let value = (num).toLocaleString(
         undefined,
         { minimumFractionDigits: 0 }
@@ -27,7 +27,7 @@ const sortCountries = countries => {
 
 export const renderCountry = country => {
     const markup = `
-        <div class="results__card">
+        <div class="results__card" data-name="${country.name.common}">
             <figure class="results__card-img">
                 <img src="${country.flags.svg}" alt="${country.name.common} Flag">
             </figure>

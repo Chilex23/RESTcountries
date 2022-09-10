@@ -8,6 +8,7 @@ import { elements, renderLoader, clearLoader } from './Views/base';
 import * as allCountriesView from './Views/allCountriesView';
 import * as searchCountryView from './Views/searchCountryView';
 import * as searchRegionView from './Views/searchRegionView';
+import * as countryView from "./Views/countryView";
 
 /*
 GLOBAL STATE
@@ -116,13 +117,44 @@ console.log(state);
 window.addEventListener('load', loadAll);
 elements.allCountries.addEventListener('click', loadAll);
 
+const loadCountry = async (e) => {
+    const card = e.target.closest('.results__card');
+    let country = card.dataset.name;
+    if (country) {
+        //2. New Country Object and add it to state
+        state.countries = new SearchCountry(country);
+         //3. Prepare the UI for results
+         allCountriesView.clearResults();
+         renderLoader(elements.resContainer);
+ 
+         try {
+             await state.countries.getResults();
+             window.location.hash = "#countries";
+             clearLoader();
+             //4. Render the results
+             countryView.countryDetails(state.countries.result[0]);
+         } catch (err) {
+             console.log(err);
+         }
+    }
+}
+
+// Event Listener for getting Country Details
+elements.resultsList.addEventListener('click', loadCountry);
+
+// Event Listener to go back to home page.
+elements.resultsList.addEventListener('click', e => {
+    const btn = e.target.closest('.back');
+    if (btn) window.location.href = "/"
+})
+
 // Event listener for the pagination buttons
 elements.pagination.addEventListener('click', e => {
     const btn = e.target.closest('.btn--inline');
     if (btn) {
         const goToPage = parseInt(btn.dataset.page);
         const selectedBtn = document.querySelector(`[data-page='${goToPage}']`);
-        scroll();
+        scrollTo(0, 100);
         selectedBtn.classList.add('purple');
         console.log(selectedBtn);
         allCountriesView.clearResults();

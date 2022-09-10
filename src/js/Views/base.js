@@ -5,7 +5,8 @@ export const elements = {
     searchVal: document.querySelector('.header__search'),
     searchForm: document.querySelector('.header__form'),
     dropdwnVal: document.querySelector('.header__region-dropdwn'),
-    allCountries: document.querySelector('.all')
+    allCountries: document.querySelector('.all'),
+    back: document.querySelector('.back')
 }
 
 export const elementStrings = {
